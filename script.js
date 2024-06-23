@@ -70,4 +70,11 @@ function determineResult(reel1, reel2, reel3) {
     updateTokenDisplay();
 }
 
-document.getElementById('spin-button').addEventListener('click', spinReels);
+document.getElementById('handle').addEventListener('mousedown', () => {
+    document.getElementById('handle').classList.add('active');
+    spinReels();
+});
+
+document.getElementById('handle').addEventListener('mouseup', () => {
+    document.getElementById('handle').classList.remove('active');
+});
