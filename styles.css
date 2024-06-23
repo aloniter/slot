@@ -10,12 +10,17 @@ body {
     margin: 0;
 }
 
+#game-container {
+    display: flex;
+    align-items: center;
+}
+
 #slot-machine {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.8); /* Optional: Add a slight background to the slot machine area for better visibility */
+    background: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-radius: 10px;
 }
@@ -38,32 +43,30 @@ body {
     height: 80px;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 1em;
+#handle-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+#handle {
+    width: 40px;
+    height: 100px;
+    background: url('handle.png') no-repeat center center;
+    background-size: cover;
     cursor: pointer;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    transition: transform 0.2s;
 }
 
-button:hover {
-    background-color: #555;
+#handle:active {
+    transform: translateY(100px);
 }
 
-#result {
+#result, #tokens {
     margin-top: 20px;
     font-size: 1.5em;
-    background: rgba(255, 255, 255, 0.8); /* Optional: Add a slight background to the result area for better visibility */
-    padding: 10px;
-    border-radius: 10px;
-}
-
-#tokens {
-    margin-top: 20px;
-    font-size: 1.5em;
-    background: rgba(255, 255, 255, 0.8); /* Optional: Add a slight background to the tokens area for better visibility */
+    background: rgba(255, 255, 255, 0.8);
     padding: 10px;
     border-radius: 10px;
 }
